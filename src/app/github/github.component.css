@@ -1,0 +1,8 @@
+.test1 {
+    white-space: nowrap;
+    width: 200px;
+    overflow: hidden;
+    text-overflow: clip;
+    font-size: 201%;
+    color:red;
+  }

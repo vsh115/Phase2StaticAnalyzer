@@ -1,0 +1,29 @@
+<html>
+
+<head></head>
+<title>Home Page</title>
+
+<body bgcolor="pink">
+  <p align="center">
+    <font face="verdana" color="blue" size=150>Welcome to Code Analyzer</font>
+  </p>
+
+  <!--View 1-->
+  <div class="open-card-BG" *ngIf="View=='regView1'">
+    <input type="button" (click)=" changeView('regView2')" value="Analyze Git Url" class="button button1">
+    <input type="button" (click)=" changeView('regView3')" value="Analyze My Code" class="button button1">
+  </div>
+  <!--View 2-->
+  <div class="open-card-BG" *ngIf="View=='regView2'">
+
+    <git-hub></git-hub>
+  </div>
+  <!--View 3-->
+  <div class="open-card-BG" *ngIf="View=='regView3'">
+
+    <code-editor></code-editor>
+  </div>
+
+</body>
+
+</html>
