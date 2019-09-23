@@ -10,19 +10,19 @@
 
   <!--View 1-->
   <div class="open-card-BG" *ngIf="View=='regView1'">
-    <input type="button" (click)=" changeView('regView2')" value="Analyze Git Url" class="button button1">
-    <input type="button" (click)=" changeView('regView3')" value="Analyze My Code" class="button button1">
+    <input type="button" (click)=" gotoGithub()" value="Analyze Git Url" class="button button1">
+    <input type="button" (click)=" gotoCodeditor()" value="Analyze My Code" class="button button1">
   </div>
-  <!--View 2-->
+  <!--View 2--
   <div class="open-card-BG" *ngIf="View=='regView2'">
 
     <git-hub></git-hub>
   </div>
-  <!--View 3-->
+  --View 3--
   <div class="open-card-BG" *ngIf="View=='regView3'">
 
     <code-editor></code-editor>
-  </div>
+  </div> -->
 
 </body>
 

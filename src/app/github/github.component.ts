@@ -16,24 +16,12 @@ export class GithubComponent implements OnInit {
   giturl: string;
   message: string;
 
-  // pmdRep: any;
-  //gitobj:GithubComponent=new GithubComponent();
 
   private _location: Location;
   public constructor(@Inject(Router) private router: Router) {
 
 
   }
-
-
-
-  /* public async getPmdReport(view, git: string) {
-
-    this.giturl=git;
-    this.View = view;
-    this.pmdRep =( await this.GithubService.getPmdReport(git)).data;
-    console.log("Pmd : ", this.pmdRep);
-  } */
 
 
   ngOnInit() {

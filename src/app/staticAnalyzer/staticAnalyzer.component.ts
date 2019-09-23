@@ -1,5 +1,6 @@
-import {Component,Input,Output,EventEmitter, OnInit} from '@angular/core';
+import {Component,Input,Output,EventEmitter, OnInit, Inject} from '@angular/core';
 import {Location} from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
 
@@ -13,7 +14,7 @@ export class StaticAnalyzerComponent implements OnInit{
 
     View:string;
 
-    constructor(private _location: Location) 
+    constructor(private _location: Location,@Inject(Router) private router: Router) 
   {}
 
   backClicked() {
@@ -28,8 +29,11 @@ export class StaticAnalyzerComponent implements OnInit{
           this.View= view;
       }
 
-      previousView(view) {
+      gotoGithub(){
 
-          this.View= view;
+        this.router.navigate(['/github']);
+      }
+      gotoCodeditor(){
+        this.router.navigate(['/codeEditor']);
       }
 }
