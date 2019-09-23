@@ -13,17 +13,17 @@ export class SimComponent implements OnInit {
 
 
   giturl: string;
-  gitobj:GithubComponent;
-  simRep:any;
+   simRep:any;
    router: Router;
   constructor(private SimService: SimService) { 
     this.giturl = window.history.state.data;
+    this.getSimReport();
   }
 
   ngOnInit() {
     
 
-    this.getSimReport();
+   
   }
 
   public async getSimReport() {

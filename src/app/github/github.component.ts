@@ -51,17 +51,17 @@ export class GithubComponent implements OnInit {
     this._location.back();
   }
 
-  btn1Click = function () {
+  CheckStyleClick = function () {
     this.router.navigate(['/cs'], { state: { data: this.giturl } });
   }
-  btn2Click = function () {
-    this.router.navigate(['/pmd']);
+  PmdClick = function () {
+    this.router.navigate(['/pmd'], { state: { data: this.giturl } });
   }
-  btn3Click = function () {
-    this.router.navigate(['/sim']);
+  SimianClick = function () {
+    this.router.navigate(['/sim'], { state: { data: this.giturl } });
   }
-  btn4Click = function () {
-    this.router.navigate(['/all']);
+  AllClick = function () {
+    this.router.navigate(['/all'], { state: { data: this.giturl } });
   }
 
 }

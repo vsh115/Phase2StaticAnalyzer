@@ -12,8 +12,7 @@ import { RouteConfigLoadStart, Router } from '@angular/router';
 export class PmdComponent implements OnInit {
 
 
- @Input() giturl: string;
-  gitobj:GithubComponent;
+ giturl: string;
   pmdRep:any;
    router: Router;
   //
@@ -21,13 +20,13 @@ export class PmdComponent implements OnInit {
 
   public constructor(private PmdService: PmdService ) {
     this.giturl = window.history.state.data;
+    this.getPmdReport();
   
   }
   
 
   ngOnInit() {
     
-    this.getPmdReport();
   }
 
   public async getPmdReport() {

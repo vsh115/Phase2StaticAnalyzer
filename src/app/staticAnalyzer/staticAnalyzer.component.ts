@@ -1,10 +1,9 @@
 import {Component,Input,Output,EventEmitter, OnInit} from '@angular/core';
 import {Location} from '@angular/common';
 
-
 @Component({
 
-selector: 'static-rep',
+selector: 'static-analyzer',
 templateUrl:'staticAnalyzer.component.html',
 styleUrls:['./staticAnalyzer.component.css']
 })

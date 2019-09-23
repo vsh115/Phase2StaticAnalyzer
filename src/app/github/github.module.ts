@@ -6,11 +6,11 @@ import {FormsModule} from '@angular/forms';
 
 import { from } from 'rxjs';
 
-import { PmdModule } from '../pmd/pmd.module';
+import { PmdModule } from '../pmdTool/pmd.module';
 import { GithubComponent } from './github.component';
-import { PmdComponent } from '../pmd/pmd.component';
+import { PmdComponent } from '../pmdTool/pmd.component';
 import { AppModule } from '../app.module';
-import { CsComponent } from '../cs/cs.component';
+import { CsComponent } from '../chechStyleTool/cs.component';
 
 
 

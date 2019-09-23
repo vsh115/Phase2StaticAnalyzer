@@ -13,16 +13,16 @@ export class AllComponent implements OnInit {
 
   
   giturl: string; 
-  gitobj:GithubComponent;
-  allRep:any;
+   allRep:any;
    router: Router;
   constructor(private allService: AllService) {
     this.giturl = window.history.state.data;
+    this.getAllReport();
    }
 
   ngOnInit() {
   
-    this.getAllReport();
+  
   }
 
   public async getAllReport() {

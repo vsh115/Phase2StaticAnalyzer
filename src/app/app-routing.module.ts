@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PmdComponent } from './pmd/pmd.component';
-import { CsComponent } from './cs/cs.component';
-import { SimComponent } from './sim/sim.component';
-import { AllComponent } from './all/all.component';
+import { PmdComponent } from './pmdTool/pmd.component';
+import { CsComponent } from './chechStyleTool/cs.component';
+import { SimComponent } from './simianTool/sim.component';
+import { AllComponent } from './allTools/all.component';
 
 
 const routes: Routes = [{path:'pmd',component:PmdComponent},
