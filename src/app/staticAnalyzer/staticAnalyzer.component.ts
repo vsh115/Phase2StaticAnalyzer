@@ -21,7 +21,12 @@ export class StaticAnalyzerComponent implements OnInit{
     this._location.back();
   }
     ngOnInit() {
-        this.View= "regView1";
+      this.router.routeReuseStrategy.shouldReuseRoute = () => {
+        // do your task for before route
+  
+        return false;
+      }
+
       }
 
     changeView(view) {

@@ -10,6 +10,10 @@ import { SimComponent } from './simianTool/sim.component';
 import { GithubComponent } from './github/github.component';
 import { AllComponent } from './allTools/all.component';
 import { RouterModule } from '@angular/router';
+import { CodeCsComponent } from './code-editor/code-cs/code-cs.component';
+import { CodePmdComponent } from './code-editor/code-pmd/code-pmd.component';
+import { CodeSimComponent } from './code-editor/code-sim/code-sim.component';
+import { CodeAllComponent } from './code-editor/code-all/code-all.component';
 
 
 
@@ -18,7 +22,11 @@ import { RouterModule } from '@angular/router';
   declarations: [
     AppComponent,
     SimComponent,
-    AllComponent
+    AllComponent,
+    CodeCsComponent,
+    CodePmdComponent,
+    CodeSimComponent,
+    CodeAllComponent
     ],
   imports: [
     BrowserModule,
