@@ -1,5 +1,4 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { Github } from './github';
 import { GithubService } from './github.service';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';

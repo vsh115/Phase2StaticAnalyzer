@@ -14,7 +14,7 @@ export class CheckIfHomePageIsPassed implements CanActivate{
     private checkIfPassed(){
         console.log(this.router.url)
         if (this.router.url == '/github' || this.router.url == '/codeeditor'){ return true}
-        else { return false};
+        else { return false}
     }
 } 
  

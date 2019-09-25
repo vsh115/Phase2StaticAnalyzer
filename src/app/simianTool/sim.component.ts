@@ -32,13 +32,6 @@ export class SimComponent implements OnInit {
     this.simRep =( await this.SimService.getSimReport(this.giturl)).data;
     console.log("Sim : ", this.simRep);
 
-    if(this.simRep){
-
-    }
-    else{
-      alert("Cannot Generate Report: either gitrepo is Wrong or there are no files present");
-      this.router.navigate(['/github']);
-    }
   }
 
 }

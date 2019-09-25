@@ -1,7 +1,5 @@
 import { Component, OnInit, Inject, Input } from '@angular/core';
 import { PmdService } from './pmd.service';
-import { Pmd } from './pmd';
-import { GithubComponent } from '../github/github.component';
 import { RouteConfigLoadStart, Router } from '@angular/router';
 
 @Component({
@@ -16,7 +14,7 @@ export class PmdComponent implements OnInit {
   pmdRep:any;
    router: Router;
    show:boolean;
-  //
+  
   
 
   public constructor(private PmdService: PmdService ) {

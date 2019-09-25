@@ -4,8 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StaticAnalyzerModule } from './staticAnalyzer/staticAnalyzer.module';
-import { from } from 'rxjs';
-import { CsComponent } from './chechStyleTool/cs.component';
+import { CsComponent } from './checkStyleTool/cs.component';
 import { SimComponent } from './simianTool/sim.component';
 import { GithubComponent } from './github/github.component';
 import { AllComponent } from './allTools/all.component';
@@ -19,7 +18,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { LoaderService } from './loader/loader.service';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoaderInterceptor } from './loader/loader.interceptor';
-import { CheckIfHomePageIsPassed } from './app.gaurd';
+import { CheckIfHomePageIsPassed } from './app.guard';
 
 @NgModule({
   declarations: [
@@ -30,13 +29,15 @@ import { CheckIfHomePageIsPassed } from './app.gaurd';
     CodePmdComponent,
     CodeSimComponent,
     CodeAllComponent,
-    LoaderComponent,
+    LoaderComponent, 
+    GithubComponent,
+    CsComponent
     ],
   imports: [
     BrowserModule,
     AppRoutingModule, StaticAnalyzerModule, RouterModule,MatProgressSpinnerModule
   ],
-  providers: [LoaderService,{ provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true },CheckIfHomePageIsPassed ],
+  providers: [LoaderService,{ provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true }, CheckIfHomePageIsPassed ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
