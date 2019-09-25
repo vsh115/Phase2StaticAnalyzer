@@ -10,18 +10,22 @@ import { CodeCsComponent } from './code-editor/code-cs/code-cs.component';
 import { CodePmdComponent } from './code-editor/code-pmd/code-pmd.component';
 import { CodeSimComponent } from './code-editor/code-sim/code-sim.component';
 import { CodeAllComponent } from './code-editor/code-all/code-all.component';
+import { CheckIfHomePageIsPassed } from './app.gaurd';
 
 
-const routes: Routes = [{path:'pmd',component:PmdComponent},
-{path:'cs',component:CsComponent},
-{path:'sim',component:SimComponent},
-{path:'all',component:AllComponent},
-{path:'github',component:GithubComponent},
-{path:'codeEditor',component:CodeEditorComponent},
-{path:'Codecs',component:CodeCsComponent},
-{path:'Codepmd',component:CodePmdComponent},
-{path:'Codesim',component:CodeSimComponent},
-{path:'Codeall',component:CodeAllComponent},
+const routes: Routes = [  
+  {path:'github',component:GithubComponent},
+  {path:'pmd',component:PmdComponent, canActivate: [CheckIfHomePageIsPassed]},
+  {path:'cs',component:CsComponent, canActivate: [CheckIfHomePageIsPassed]},
+  {path:'sim',component:SimComponent, canActivate: [CheckIfHomePageIsPassed]},
+  {path:'all',component:AllComponent, canActivate: [CheckIfHomePageIsPassed]},
+  {path:'codeeditor',component:CodeEditorComponent, canActivate: [CheckIfHomePageIsPassed]},
+  {path:'Codecs',component:CodeCsComponent, canActivate: [CheckIfHomePageIsPassed]},
+  {path:'Codepmd',component:CodePmdComponent, canActivate: [CheckIfHomePageIsPassed]},
+  {path:'Codesim',component:CodeSimComponent, canActivate: [CheckIfHomePageIsPassed]},
+  {path:'Codeall',component:CodeAllComponent, canActivate: [CheckIfHomePageIsPassed]} 
+   
+  
 
 ];
 

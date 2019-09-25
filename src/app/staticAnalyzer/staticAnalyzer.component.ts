@@ -39,6 +39,6 @@ export class StaticAnalyzerComponent implements OnInit{
         this.router.navigate(['/github']);
       }
       gotoCodeditor(){
-        this.router.navigate(['/codeEditor']);
+        this.router.navigate(['/codeeditor']);
       }
 }
