@@ -25,8 +25,9 @@
   }
   
   .button1 {
-    background-color:teal; 
-    color:red; 
+    background-color:tan; 
+    color:red;
+    font-weight:400; 
     border: 2px solid #4CAF50;
   }
   

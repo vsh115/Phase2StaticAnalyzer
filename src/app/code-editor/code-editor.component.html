@@ -3,19 +3,32 @@
 
 <p class="heading1">Analyze Your Code Before You Go Forward!!!</p>
 <div>
+    
+    <textarea name="area" #code rows="40" cols="90"></textarea>
+  
+     
     
-<input type="text" #code style="height: 500px;width:850" >
- <input type="button" (click)=" getUserCode(code.value)" value="Upload">
-
-<input type="text"  style="height: 500px;width:1250" value="{{userCode}}"  TextMode="MultiLine">
-</div>
+    <textarea type="area" id="outputarea"  rows="40" cols="90" value=" YOUR REPORT HERE:{{report}}"  readonly></textarea>
+    </div> 
 
 
 
+    <div>
+<br>
+<br>
+  <input type="button" (click)=" getUserCode(code.value)" value="Upload">
+  <p align="center" class="heading1"><font size=30>{{message}} </font></p>
+
+    </div>
+
+<br>
+<div>
 <input type="button" value="Analyze with checkstyle"  class="button button1" (click)="CheckStyleClick(code.value)">
 <input type="button" value="Analyze with Pmd"  class="button button1" (click)="PmdClick()">
 <input type="button" value="Analyze with Simian"  class="button button1" (click)="SimianClick()">
 <input type="button" value="Analyze with All tools"  class="button button1" (click)="AllClick()">
+
+</div>
 
 </body>
 </html>

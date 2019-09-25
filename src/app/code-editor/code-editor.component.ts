@@ -10,6 +10,7 @@ export class CodeEditorComponent implements OnInit {
 
    userCode: string;
   message:string;
+  clearmessage:string;
   @Input() report:string;
 
 
@@ -25,28 +26,56 @@ export class CodeEditorComponent implements OnInit {
   }
 
   getUserCode(code: string) {
-
     this.userCode = code;
-    this.message = "Uploaded!!!";
+    if(this.userCode){
+      this.message = "Uploaded!!!";
+      
+    }
+    else{
+      alert("Please Enter the Code to Analyze!!!");
+    }
+     }
 
-  }
-/*
-  backClicked() {
-    this._location.back();
-  } */
 
   CheckStyleClick = function () {
 
-    this.router.navigate(['/Codecs'], { state: { data: this.userCode } });
+    if(this.userCode){
+      this.router.navigate(['/Codecs'], { state: { data: this.userCode } });
+    }
+    else{
+      alert("Either Code Box is empty or you did not Upload it");
+    }
+    
   }
   PmdClick = function () {
-    this.router.navigate(['/Codepmd'], { state: { data: this.userCode } });
+
+    if(this.userCode){
+      this.router.navigate(['/Codepmd'], { state: { data: this.userCode } });
+    }
+    else{
+      alert("Either Code Box is empty or you did not Upload it");
+    }
+    
   }
   SimianClick = function () {
-    this.router.navigate(['/Codesim'], { state: { data: this.userCode } });
+    if(this.userCode){
+      this.router.navigate(['/Codesim'], { state: { data: this.userCode } });
+    }
+    else{
+      alert("Either Code Box is empty or you did not Upload it");
+    }
+
+    
   }
   AllClick = function () {
-    this.router.navigate(['/Codeall'], { state: { data: this.userCode } });
+
+    if(this.userCode){
+      this.router.navigate(['/Codeall'], { state: { data: this.userCode } });
+    }
+    else{
+      alert("Either Code Box is empty or you did not Upload it");
+    }
+    
   }
 
 }

@@ -6,3 +6,22 @@
     font-size: 201%;
     color:red;
   }
+
+  .heading1{
+    text-align: center;
+    text-decoration: underline;
+    color:red;
+    size: 400;
+}
+
+.button {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.button1:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+div { text-align: center; }

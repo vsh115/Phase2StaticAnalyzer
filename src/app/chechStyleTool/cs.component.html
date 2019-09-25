@@ -1,8 +1,13 @@
 
+<br>
+<br>
 
+<div *ngIf="loading" class="spinner-border spinner-border-sm"> Please Wait While We Are Retrieving Your Report!!!! </div>
+<br>
+<br>
 <div >
 
 
-        Rep:{{csRep}}
+            <textarea name="area" #code rows="35" cols="150" value="Report:{{csRep}}"  readonly></textarea>  
     
   </div>

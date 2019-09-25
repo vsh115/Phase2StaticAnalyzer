@@ -15,6 +15,7 @@ export class PmdComponent implements OnInit {
  giturl: string;
   pmdRep:any;
    router: Router;
+   show:boolean;
   //
   
 
@@ -33,6 +34,16 @@ export class PmdComponent implements OnInit {
     console.log(this.giturl);
     this.pmdRep =( await this.PmdService.getPmdReport(this.giturl)).data;
     console.log("Pmd : ", this.pmdRep);
+    if(this.pmdRep)
+    {
+    
+      this.show=true;
+    }
+    else{
+      alert("Cannot Generate Report: either gitrepo is Wrong or there are no files present");
+      this.router.navigate(['/github']);
+    }
+
   }
 
  

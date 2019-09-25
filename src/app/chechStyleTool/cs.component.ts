@@ -10,27 +10,25 @@ import { CsService } from './cs.service';
 })
 export class CsComponent implements OnInit {
 
-
+  loading = false;
   giturl: string;
   csRep: any;
   router: Router;
+  
+  
   constructor(private CsService: CsService) { 
     this.giturl = window.history.state.data;
     this.getCsReport();
   }
 
   ngOnInit() {
-    if (this.giturl) {
     
-    }
-    else {
-      alert(this.giturl);
-    }
-
   }
   public async getCsReport() {
     this.csRep = (await this.CsService.getCsReport(this.giturl)).data;
-    console.log("Pmd : ", this.csRep);
+    console.log("CS : ", this.csRep);
+   
+
   }
 
 }

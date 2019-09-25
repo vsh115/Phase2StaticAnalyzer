@@ -2,7 +2,7 @@
     text-align: center;
     text-decoration: underline;
     color:red;
-    size: 100;
+    size: 400;
 }
 
 .para1{
@@ -18,3 +18,5 @@
     background-color: #4CAF50; /* Green */
     color: white;
   }
+
+  div { text-align: center; }

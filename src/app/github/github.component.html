@@ -1,4 +1,26 @@
-<h1>Enter the GitHub URL: </h1><input #git type="text" id="giturl"><input type="button" (click)=" getGitUrl(git.value)" value="Upload">
+
+<div> 
+        <br>
+        <br>
+    
+    
+    <p class="heading1">Analyze Your Code Before You Go Forward!!!</p>
+
+    <br>
+    <br>
+
+
+<h1>Enter the GitHub URL: </h1><textarea name="area" #git rows="3" cols="40"></textarea>
+
+<br>
+<br>
+<br>
+<br>
+<input type="button" (click)=" getGitUrl(git.value)" value="Upload"   class="button button1">
+
+<br>
+<br>
+<br>
 
 <p align="center"><font class="test1">{{message}}</font></p>
 
@@ -7,12 +29,13 @@
  Analyse Repository With:
  
 
- <button type="button"  (click)="CheckStyleClick()">Check-Style</button> 
- <button type="button"  (click)="PmdClick()"> Pmd</button>   
- <button type="button"  (click)="SimianClick()">Simian</button>
- <button type="button"  (click)="AllClick()">All Tools</button> 
+ <button type="button"  (click)="CheckStyleClick()"  class="button button1" >Check-Style</button> 
+ <button type="button"  (click)="PmdClick()"  class="button button1"> Pmd</button>   
+ <button type="button"  (click)="SimianClick()"  class="button button1">Simian</button>
+ <button type="button"  (click)="AllClick()"  class="button button1">All Tools</button> 
  
 
 
-<input type="button" (click)=" backClicked()"  value=" Go Back">
+<input type="button" (click)=" backClicked()"  value=" Go Back"  class="button button1">
   
+</div>

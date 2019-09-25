@@ -15,41 +15,76 @@ export class GithubComponent implements OnInit {
 
   giturl: string;
   message: string;
+  buttonDisabled: boolean;
 
 
-  private _location: Location;
-  public constructor(@Inject(Router) private router: Router) {
+  
+  public constructor(@Inject(Router) private router: Router,private _location: Location) {
 
 
   }
 
 
   ngOnInit() {
+    
 
   }
 
   getGitUrl(git: string) {
 
+    
     this.giturl = git
-    this.message = "Uploaded!!!";
+    if(this.giturl){
+      this.message = "Uploaded!!!";
+      
+    }
+    else{
+      alert("Please Enter Git Url");
+    }
+    
 
   }
 
   backClicked() {
-    this._location.back();
+    this._location.go("");
   }
 
   CheckStyleClick = function () {
-    this.router.navigate(['/cs'], { state: { data: this.giturl } });
+    if(this.giturl){
+      this.router.navigate(['/cs'], { state: { data: this.giturl } });
+    }
+    else{
+      alert("Either Git Url is empty or you did not Upload it");
+    }
+
+    
   }
   PmdClick = function () {
-    this.router.navigate(['/pmd'], { state: { data: this.giturl } });
+    if(this.giturl){
+      this.router.navigate(['/pmd'], { state: { data: this.giturl } });
+    }
+    else{
+      alert("Either Git Url is empty or you did not Upload it");
+    }
+    
   }
   SimianClick = function () {
-    this.router.navigate(['/sim'], { state: { data: this.giturl } });
+    if(this.giturl){
+      this.router.navigate(['/sim'], { state: { data: this.giturl } });
+    }
+    else{
+      alert("Either Git Url is empty or you did not Upload it");
+    }
+   
   }
   AllClick = function () {
-    this.router.navigate(['/all'], { state: { data: this.giturl } });
+    if(this.giturl){
+      this.router.navigate(['/all'], { state: { data: this.giturl } });
+    }
+    else{
+      alert("Either Git Url is empty or you did not Upload it");
+    }
+    
   }
 
 }

@@ -14,9 +14,11 @@ import { CodeCsComponent } from './code-editor/code-cs/code-cs.component';
 import { CodePmdComponent } from './code-editor/code-pmd/code-pmd.component';
 import { CodeSimComponent } from './code-editor/code-sim/code-sim.component';
 import { CodeAllComponent } from './code-editor/code-all/code-all.component';
-
-
-
+import { LoaderComponent } from './loader/loader.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'; 
+import { LoaderService } from './loader/loader.service';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { LoaderInterceptor } from './loader/loader.interceptor';
 
 @NgModule({
   declarations: [
@@ -26,13 +28,14 @@ import { CodeAllComponent } from './code-editor/code-all/code-all.component';
     CodeCsComponent,
     CodePmdComponent,
     CodeSimComponent,
-    CodeAllComponent
+    CodeAllComponent,
+    LoaderComponent,
     ],
   imports: [
     BrowserModule,
-    AppRoutingModule, StaticAnalyzerModule, RouterModule
+    AppRoutingModule, StaticAnalyzerModule, RouterModule,MatProgressSpinnerModule
   ],
-  providers: [],
+  providers: [LoaderService,{ provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true } ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
