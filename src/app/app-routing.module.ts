@@ -19,11 +19,11 @@ const routes: Routes = [
   {path:'cs',component:CsComponent, canActivate: [CheckIfHomePageIsPassed]},
   {path:'sim',component:SimComponent, canActivate: [CheckIfHomePageIsPassed]},
   {path:'all',component:AllComponent, canActivate: [CheckIfHomePageIsPassed]},
-  {path:'codeeditor',component:CodeEditorComponent, canActivate: [CheckIfHomePageIsPassed]},
-  {path:'Codecs',component:CodeCsComponent, canActivate: [CheckIfHomePageIsPassed]},
-  {path:'Codepmd',component:CodePmdComponent, canActivate: [CheckIfHomePageIsPassed]},
-  {path:'Codesim',component:CodeSimComponent, canActivate: [CheckIfHomePageIsPassed]},
-  {path:'Codeall',component:CodeAllComponent, canActivate: [CheckIfHomePageIsPassed]} 
+  {path:'codeeditor',component:CodeEditorComponent},
+  {path:'codecs',component:CodeCsComponent, canActivate: [CheckIfHomePageIsPassed]},
+  {path:'codepmd',component:CodePmdComponent, canActivate: [CheckIfHomePageIsPassed]},
+  {path:'codesim',component:CodeSimComponent, canActivate: [CheckIfHomePageIsPassed]},
+  {path:'codeall',component:CodeAllComponent, canActivate: [CheckIfHomePageIsPassed]} 
    
   
 

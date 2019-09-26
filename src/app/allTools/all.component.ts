@@ -26,7 +26,6 @@ export class AllComponent implements OnInit {
   }
 
   public async getAllReport() {
-
   
     this.allRep =( await this.allService.getAllReport(this.giturl)).data;
     console.log("All : ", this.allRep);

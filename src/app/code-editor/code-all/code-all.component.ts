@@ -19,12 +19,7 @@ export class CodeAllComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (this.userCode) {
-  
-    }
-    else {
-    alert(this.userCode);
-    }
+    
 
   }
   public async getAllReport() {

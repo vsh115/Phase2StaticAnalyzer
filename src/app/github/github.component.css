@@ -25,3 +25,13 @@
 }
 
 div { text-align: center; }
+
+body{
+  filter: 
+progid:DXImageTransform.Microsoft.gradient(startColorstr='#4b74b0', endColorstr='#2b446a');
+background:
+-moz-linear-gradient(50% 100% , #2b446a 20%, #4b74b0 100%) 
+repeat scroll 0 0 transparent;
+
+
+}

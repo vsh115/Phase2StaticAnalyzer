@@ -1,10 +1,12 @@
 
 <body>
-
+    
+    <br><br>
 <p class="heading1">Analyze Your Code Before You Go Forward!!!</p>
+<br> <br>
 <div>
     
-    <textarea name="area" #code rows="40" cols="90"></textarea>
+    <textarea name="area" #code rows="40" cols="90"   placeholder="Write your code here..."></textarea>
   
      
     
@@ -17,17 +19,18 @@
 <br>
 <br>
   <input type="button" (click)=" getUserCode(code.value)" value="Upload">
-  <div> class="heading1"><p class="heading1">{{message}} </p></div>
+  <div> <p class="heading1">{{message}} </p></div>
 
     </div>
 
-<br>
-<div>
-<input type="button" value="Analyze with checkstyle"  class="button button1" (click)="CheckStyleClick(code.value)">
-<input type="button" value="Analyze with Pmd"  class="button button1" (click)="PmdClick()">
-<input type="button" value="Analyze with Simian"  class="button button1" (click)="SimianClick()">
-<input type="button" value="Analyze with All tools"  class="button button1" (click)="AllClick()">
 
+    <div>
+<input type="button" value="Analyze with checkstyle"  class="button button1" (click)="ButtonClick('/codecs')">
+<input type="button" value="Analyze with Pmd"  class="button button1" (click)="ButtonClick('/codepmd')">
+<input type="button" value="Analyze with Simian"  class="button button1" (click)="ButtonClick('/codesim')">
+<input type="button" value="Analyze with All tools"  class="button button1" (click)="ButtonClick('/codeall')">
+<br>
+<br>
 </div>
 
 </body>

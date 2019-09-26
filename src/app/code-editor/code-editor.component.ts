@@ -36,46 +36,13 @@ export class CodeEditorComponent implements OnInit {
     }
      }
 
-
-  CheckStyleClick = function () {
-
-    if(this.userCode){
-      this.router.navigate(['/Codecs'], { state: { data: this.userCode } });
+     ButtonClick = function (param:string) {
+      if(this.userCode){
+        this.router.navigate([param], { state: { data: this.userCode } });
+      }
+      else{
+        alert("Either Git Url is empty or you did not Upload it");
+      }
     }
-    else{
-      alert("Either Code Box is empty or you did not Upload it");
-    }
-    
-  }
-  PmdClick = function () {
-
-    if(this.userCode){
-      this.router.navigate(['/Codepmd'], { state: { data: this.userCode } });
-    }
-    else{
-      alert("Either Code Box is empty or you did not Upload it");
-    }
-    
-  }
-  SimianClick = function () {
-    if(this.userCode){
-      this.router.navigate(['/Codesim'], { state: { data: this.userCode } });
-    }
-    else{
-      alert("Either Code Box is empty or you did not Upload it");
-    }
-
-    
-  }
-  AllClick = function () {
-
-    if(this.userCode){
-      this.router.navigate(['/Codeall'], { state: { data: this.userCode } });
-    }
-    else{
-      alert("Either Code Box is empty or you did not Upload it");
-    }
-    
-  }
 
 }

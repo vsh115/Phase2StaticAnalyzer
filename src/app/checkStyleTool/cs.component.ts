@@ -25,9 +25,13 @@ export class CsComponent implements OnInit {
     
   }
   public async getCsReport() {
+
+    var start=performance.now();
     this.csRep = (await this.CsService.getCsReport(this.giturl)).data;
-    console.log("CS : ", this.csRep);
-   
+
+     var end=performance.now();
+
+   console.log("This Request takes time:"+(end-start));
 
   }
 

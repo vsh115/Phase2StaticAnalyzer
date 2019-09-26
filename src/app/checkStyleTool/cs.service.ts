@@ -10,7 +10,7 @@ public constructor(private http:HttpClient){
 }
 public async getCsReport(giturl: string) {
     const response = await this.http.post<ExpectedDataResponse>('http://localhost:8080/api/cs/', giturl).toPromise();
-    console.log("In Service : ", response);
+    
     return response;
 }
 

@@ -44,46 +44,17 @@ export class GithubComponent implements OnInit {
 
   }
 
-  backClicked() {
-    this._location.go("");
+
+
+  ButtonClick = function (param:string) {
+    if(this.giturl){
+      this.router.navigate([param], { state: { data: this.giturl } });
+    }
+    else{
+      alert("Either Git Url is empty or you did not Upload it");
+    }
   }
 
-  CheckStyleClick = function () {
-    if(this.giturl){
-      this.router.navigate(['/cs'], { state: { data: this.giturl } });
-    }
-    else{
-      alert("Either Git Url is empty or you did not Upload it");
-    }
 
-    
-  }
-  PmdClick = function () {
-    if(this.giturl){
-      this.router.navigate(['/pmd'], { state: { data: this.giturl } });
-    }
-    else{
-      alert("Either Git Url is empty or you did not Upload it");
-    }
-    
-  }
-  SimianClick = function () {
-    if(this.giturl){
-      this.router.navigate(['/sim'], { state: { data: this.giturl } });
-    }
-    else{
-      alert("Either Git Url is empty or you did not Upload it");
-    }
-   
-  }
-  AllClick = function () {
-    if(this.giturl){
-      this.router.navigate(['/all'], { state: { data: this.giturl } });
-    }
-    else{
-      alert("Either Git Url is empty or you did not Upload it");
-    }
-    
-  }
 
 }
