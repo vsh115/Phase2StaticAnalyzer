@@ -29,18 +29,12 @@ export class PmdComponent implements OnInit {
   }
 
   public async getPmdReport() {
-    console.log(this.giturl);
-    this.pmdRep =( await this.PmdService.getPmdReport(this.giturl)).data;
-    console.log("Pmd : ", this.pmdRep);
-    if(this.pmdRep)
-    {
-    
-      this.show=true;
-    }
-    else{
-      alert("Cannot Generate Report: either gitrepo is Wrong or there are no files present");
-      this.router.navigate(['/github']);
-    }
+    var start = performance.now();
+    this.PmdService.getPmdReport(this.giturl).subscribe((result) => this.pmdRep = result.data);
+
+    var end = performance.now();
+
+    console.log("This Request takes time:" + (end - start));
 
   }
 

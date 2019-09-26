@@ -9,9 +9,9 @@ export class CodePmdService{
 public constructor(private http:HttpClient){
 
 }
-public async getCodePmdReport(userCode: string) {
-    const response = await this.http.post<ExpectedDataResponse>('http://localhost:8080/api/code/pmd/', userCode).toPromise();
-    console.log("In Service : ", response);
+public getCodePmdReport(userCode: string) {
+    const response = this.http.post<ExpectedDataResponse>('http://localhost:8080/api/code/pmd/', userCode);
+    
     return response;
 }
 

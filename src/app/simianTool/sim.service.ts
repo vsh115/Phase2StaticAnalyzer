@@ -9,9 +9,10 @@ export class SimService{
 public constructor(private http:HttpClient){
 
 }
-public async getSimReport(giturl: string) {
-    const response = await this.http.post<ExpectedDataResponse>('http://localhost:8080/api/sim/', giturl).toPromise();
-    console.log("In Service : ", response);
+public getSimReport(giturl: string) {
+   
+    const response = this.http.post<ExpectedDataResponse>('http://localhost:8080/api/sim/', giturl);
+    
     return response;
 }
 

@@ -5,7 +5,7 @@ import { CodeEditorComponent } from './code-editor.component';
 describe('CodeEditorComponent', () => {
   let component: CodeEditorComponent;
   let fixture: ComponentFixture<CodeEditorComponent>;
-
+  
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ CodeEditorComponent ]
@@ -17,7 +17,11 @@ describe('CodeEditorComponent', () => {
     fixture = TestBed.createComponent(CodeEditorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+    
   });
 
   
+
+
+
 });

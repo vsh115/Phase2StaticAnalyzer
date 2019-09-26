@@ -10,9 +10,9 @@ export class CodeSimService{
 public constructor(private http:HttpClient){
 
 }
-public async getSimReport(usercode: string) {
-    const response = await this.http.post<ExpectedDataResponse>('http://localhost:8080/api/sim/', usercode).toPromise();
-    console.log("In Service : ", response);
+public getSimReport(usercode: string) {
+    const response = this.http.post<ExpectedDataResponse>('http://localhost:8080/api/code/sim/', usercode);
+    
     return response;
 }
 

@@ -22,8 +22,13 @@ export class CodeCsComponent implements OnInit {
 
   }
   public async getCsReport() {
-    this.csRep = (await this.CsService.getCsReport(this.userCode)).data;
-    console.log("Cs : ", this.csRep);
+    
+    var start = performance.now();
+    this.CsService.getCsReport(this.userCode).subscribe((result) => this.csRep = result.data);
+
+    var end = performance.now();
+
+    console.log("This Request takes time:" + (end - start));
   }
 
 }

@@ -28,7 +28,7 @@ export class CodeEditorComponent implements OnInit {
   getUserCode(code: string) {
     this.userCode = code;
     if(this.userCode){
-      this.message = "Uploaded!!!";
+      this.message = "Uploaded!";
       
     }
     else{
@@ -36,9 +36,9 @@ export class CodeEditorComponent implements OnInit {
     }
      }
 
-     ButtonClick = function (param:string) {
+     ButtonClick = function (tool:string) {
       if(this.userCode){
-        this.router.navigate([param], { state: { data: this.userCode } });
+        this.router.navigate([tool], { state: { data: this.userCode } });
       }
       else{
         alert("Either Git Url is empty or you did not Upload it");

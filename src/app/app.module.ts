@@ -29,7 +29,7 @@ import { CheckIfHomePageIsPassed } from './app.guard';
     CodePmdComponent,
     CodeSimComponent,
     CodeAllComponent,
-    LoaderComponent, 
+    LoaderComponent
       
     ],
   imports: [

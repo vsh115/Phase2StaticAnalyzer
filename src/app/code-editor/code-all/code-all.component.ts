@@ -23,8 +23,12 @@ export class CodeAllComponent implements OnInit {
 
   }
   public async getAllReport() {
-    this.allRep = (await this.AllService.getAllReport(this.userCode)).data;
-    console.log("Cs : ", this.allRep);
+    var start = performance.now();
+    this.AllService.getAllReport(this.userCode).subscribe((result) => this.allRep = result.data);
+
+    var end = performance.now();
+
+    console.log("This Request takes time:" + (end - start));
   }
 
 }

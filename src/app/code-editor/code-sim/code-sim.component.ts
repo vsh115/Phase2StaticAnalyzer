@@ -26,8 +26,12 @@ export class CodeSimComponent implements OnInit {
  public async getSimReport() {
 
  
-   this.simRep =( await this.SimService.getSimReport(this.userCode)).data;
-   console.log("Sim : ", this.simRep);
+  var start = performance.now();
+  this.SimService.getSimReport(this.userCode).subscribe((result) => this.simRep = result.data);
+
+  var end = performance.now();
+
+  console.log("This Request takes time:" + (end - start));
  }
 
 

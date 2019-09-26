@@ -8,10 +8,11 @@ export class AllService{
 public constructor(private http:HttpClient){
 
 }
-public async getAllReport(giturl: string) {
-    const response = await this.http.post<ExpectedDataResponse>('http://localhost:8080/api/all', giturl).toPromise();
-    console.log("In Service : ", response);
+public getAllReport(giturl: string) {
+    const response = this.http.post<ExpectedDataResponse>('http://localhost:8080/api/all/', giturl);
+    
     return response;
+
 }
 
 }

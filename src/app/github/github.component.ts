@@ -34,7 +34,7 @@ export class GithubComponent implements OnInit {
     
     this.giturl = git
     if(this.giturl){
-      this.message = "Uploaded!!!";
+      this.message = "Uploaded!";
       
     }
     else{

@@ -8,8 +8,8 @@ export class CsService{
 public constructor(private http:HttpClient){
 
 }
-public async getCsReport(giturl: string) {
-    const response = await this.http.post<ExpectedDataResponse>('http://localhost:8080/api/cs/', giturl).toPromise();
+public  getCsReport(giturl: string) {
+    const response = this.http.post<ExpectedDataResponse>('http://localhost:8080/api/cs/', giturl);
     
     return response;
 }

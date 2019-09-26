@@ -27,9 +27,12 @@ export class CodePmdComponent implements OnInit {
   }
 
   public async getCodePmdReport() {
-    console.log(this.userCode);
-    this.pmdRep =( await this.PmdService.getCodePmdReport(this.userCode)).data;
-    console.log("Pmd : ", this.pmdRep);
+    var start = performance.now();
+    this.PmdService.getCodePmdReport(this.userCode).subscribe((result) => this.pmdRep = result.data);
+
+    var end = performance.now();
+
+    console.log("This Request takes time:" + (end - start));
   }
 
  

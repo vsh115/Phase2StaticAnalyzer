@@ -11,7 +11,7 @@ import { Subject } from 'rxjs';
 export class LoaderComponent { 
   color = 'primary'; 
   mode = 'indeterminate'; 
-  value = 50; 
+  value = 60; 
   isLoading: Subject<boolean> = this.loaderService.isLoading; 
 
   constructor(private loaderService: LoaderService){} 
